@@ -1,6 +1,6 @@
 {
   "name": "@juicyarts/css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.scss",
   "sass": "index.scss",
   "license": "MIT",
