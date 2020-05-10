@@ -1,4 +1,3 @@
-
 name: Check
 
 on:
@@ -13,13 +12,18 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Lint 
+        uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@juicyarts'
-      - run: yarn
-      - run: yarn lint
+      - run: |
+          yarn
+          yarn lint
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
