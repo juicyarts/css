@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  pathPrefix: '/css',
   siteMetadata: {
     title: '@juicyarts/css',
     description: 'juicyarts css',
