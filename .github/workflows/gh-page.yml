@@ -17,12 +17,13 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          scope: '@juicyarts'
       - run: |
           cd packages/docs
-          yarn install
+          yarn
           yarn build
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
