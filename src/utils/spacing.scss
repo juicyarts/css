@@ -1,0 +1,57 @@
+$spacing: (
+  'xxs': $sizing-xxs,
+  'xs': $sizing-xs,
+  's': $sizing-s,
+  'm': $sizing-m,
+  'l': $sizing-l,
+  'xl': $sizing-xl,
+);
+
+$directions: top, bottom, left, right;
+
+$alignments: x, y;
+
+@include classnamefromlist($spacing, 'p', padding);
+@include classnamefromlist($spacing, 'm', margin);
+
+@each $name, $size in $spacing {
+  @each $direction in $directions {
+    %p-#{$direction}-#{$name},
+    .p-#{$direction}-#{$name} {
+      padding-#{$direction}: $size;
+    }
+
+    %m-#{$direction}-#{$name},
+    .m-#{$direction}-#{$name} {
+      margin-#{$direction}: $size;
+    }
+  }
+
+  @each $alignment in $alignments {
+    %p-#{$alignment}-#{$name},
+    .p-#{$alignment}-#{$name} {
+      @if ($alignment == x) {
+        padding-left: $size;
+        padding-right: $size;
+      }
+
+      @else {
+        padding-bottom: $size;
+        padding-top: $size;
+      }
+    }
+
+    %m-#{$alignment}-#{$name},
+    .m-#{$alignment}-#{$name} {
+      @if ($alignment == x) {
+        margin-left: $size;
+        margin-right: $size;
+      }
+
+      @else {
+        margin-bottom: $size;
+        margin-top: $size;
+      }
+    }
+  }
+}

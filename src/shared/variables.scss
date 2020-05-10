@@ -1,0 +1,169 @@
+$base-path: '~@juicyarts/css';
+$font-path: '#{$base-path}/fonts/' !default;
+$gfx-path: '#{$base-path}/gfx/' !default;
+
+$font-family-light: 'Roboto-Light', arial, helvetica, sans-serif;
+$font-family-regular: 'Roboto', arial, helvetica, sans-serif;
+$font-family-bold: 'Roboto-Bold', arial, helvetica, sans-serif;
+
+// type
+$default-font-family: $font-family-regular;
+$medium-font-family: 'Roboto Medium', arial, helvetica, sans-serif;
+$bold-font-family: 'Roboto Bold', arial, helvetica, sans-serif;
+
+$color-white: #fff;
+$color-black: #000;
+$color-blue: #2ea8ef;
+$color-dark-blue: #0b345f;
+$color-orange: #efb82e;
+$color-red: #ef2e2e;
+$color-green: #7ecb4e;
+
+$color-gray-1: #4e4e4e;
+$color-gray-2: #8a8a8a;
+$color-gray-3: #bebebe;
+$color-gray-4: #d9d9d9;
+$color-gray-5: #e4e4e4;
+$color-gray-6: #eee;
+
+$color-data-green: #7ecb4e;
+$color-data-light-green: #bee5a5;
+$color-data-purple: #9874af;
+$color-data-light-purple: #d9c5e6;
+$color-data-salmon: #f38a76;
+
+$color-functional-yellow: #f4e618;
+$color-functional-light-green: #9dc22a;
+$color-functional-middle-green: #00a146;
+$color-functional-teal: #009bc2;
+$color-functional-purple: #582f86;
+$color-functional-pink: #bb3288;
+$color-functional-rose: #ea657c;
+$color-functional-orange: #ea632d;
+
+$success-color: $color-green;
+$warn-color: $color-orange;
+$error-color: $color-red;
+$primary-color: $color-blue;
+$primary-color-dimmed: #a0dcff;
+
+// TODO: this is ux/ui mess. We need to make clear that it's bad practice to have so many different font-sizes
+// it gets even messier when we look at input sizes
+$font-size-xs: 9pt;
+$font-size-s: 12pt;
+$font-size-xm: 14pt;
+$font-size-m: 15pt;
+$font-size-l: 17pt;
+$font-size-xl: 20pt;
+
+$icon-size-xs: 25px;
+$icon-size-s: 30px;
+$icon-size-m: 35px;
+$icon-size-l: 40px;
+$icon-size-xl: 50px;
+
+// misc
+$border-radius-s: 3px;
+$border-radius-m: 4px;
+$border-radius-l: 5px;
+
+$sizing-xxs: 5px;
+$sizing-xs: 10px;
+$sizing-s: 15px;
+$sizing-m: 20px;
+$sizing-l: 30px;
+$sizing-xl: 40px;
+$sizing-xxl: 60px;
+
+// shell
+$shell-background: $color-gray-5;
+
+// grid
+$grid-container-max-width: 1200px;
+$grid-column-length: 12;
+$grid-gutter-width: $sizing-xs;
+$grid-column-max-width: 100%;
+
+// statusbar
+$statusbar-background: $color-black;
+$statusbar-foreground: $color-white;
+$statusbar-user-not-logged-in: $color-orange;
+$statusbar-user-logged-in: $statusbar-foreground;
+$statusbar-height: 30px;
+
+// bottombar
+$bottombar-background: linear-gradient(0deg, $color-gray-3 95%, $color-gray-2 100%);
+$bottombar-height: 100px;
+
+// navbar
+$navbar-height: 70px;
+$mobile-nav-height: 45px;
+
+// buttons
+$button-background: $color-white;
+$button-foreground: $color-gray-2;
+$button-background-disabled: $color-gray-6;
+$button-foreground-disabled: $color-gray-3;
+$button-background-active: $primary-color;
+$button-foreground-active: $color-white;
+$button-font-family: 'Roboto', sans-serif;
+$button-font-weight: 500;
+$button-border-radius: $border-radius-l;
+
+// dropdown
+$dropdown-border-radius: $border-radius-s;
+
+// --- TEXT ---
+// box
+$box-border-radius: $border-radius-l;
+$box-background: $color-white;
+$box-background-gray: $color-gray-5;
+$box-empty-font-size: $font-size-m;
+$box-header-font-size: $font-size-m;
+$box-subheader-font-size: $font-size-xm;
+
+// list
+$list-header-font-size: 15pt;
+$list-item-font-size: 13pt;
+
+// transitions
+$default-transition-duration: 0.15s;
+$default-transition-easing: linear;
+
+// modals
+$modal-backdrop-color: rgba(0, 0, 0, 0.7);
+
+// forms
+$form-input-background: $color-white;
+$form-input-border: 2px solid $color-gray-5;
+$form-input-s-padding: $sizing-m;
+$form-input-medium-padding: $sizing-m;
+$form-input-large-padding: $sizing-l;
+
+$form-input-font-size-xs: 13pt;
+$form-input-font-size-s: 15pt;
+$form-input-font-size-m: 25pt;
+$form-input-font-size-l: 38pt;
+
+$form-input-color: $color-gray-1;
+$form-input-label-color: $color-gray-2;
+$form-input-placeholder-color: $color-gray-3;
+$form-input-caret-color: $primary-color;
+$form-input-focus-color: $primary-color;
+$form-input-border-radius: $border-radius-s;
+
+// Loader
+$loader-size-s: 26px;
+$loader-size-m: 30px;
+$loader-margin: 0;
+$loader-stroke-width-s: 1px;
+$loader-stroke-width-m: 3px;
+$loader-background: $color-white;
+$loader-color: $primary-color;
+$loader-speed: 1s;
+$loader-delay: 0.2s;
+
+// overlay
+$overlay-width-s: 350px;
+$overlay-width-m: 400px;
+$overlay-width-l: 655px;

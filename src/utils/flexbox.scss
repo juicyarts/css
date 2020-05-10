@@ -1,0 +1,33 @@
+// flex convenience classes
+
+$flex-grid-max-wdith: 100%;
+$flex-content-alignments: stretch, center, flex-start, flex-end, space-between,
+  space-around, initial;
+$flex-item-alignments: stretch, center, flex-start, flex-end, baseline, initial;
+$flex-justify-content: center, space-around, space-between, flex-start, flex-end;
+$flex-directions: row, column;
+
+%flex-container {
+  max-width: $flex-grid-max-wdith;
+  width: 1200px;
+}
+
+div[class^='flex'],
+div[class^='flex__'],
+div[class*=' flex'],
+div[class*=' flex__'] {
+  display: flex;
+}
+
+@include classnamefromlist($flex_directions, 'flex__dir-', flex-direction);
+@include classnamefromlist(
+  $flex-content-alignments,
+  'flex__ac-',
+  align-content
+);
+@include classnamefromlist($flex-item-alignments, 'flex__ai-', align-items);
+@include classnamefromlist($flex-justify-content, 'flex__jc-', justify-content);
+
+.flex-grow {
+  flex: 1 0 auto;
+}

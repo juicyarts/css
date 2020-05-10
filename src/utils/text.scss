@@ -1,0 +1,37 @@
+$text-sizes: (
+  'xs': $font-size-xs,
+  's': $font-size-s,
+  'm': $font-size-m,
+  'l': $font-size-l,
+  'xl': $font-size-xl,
+);
+
+$text-alignments: left, center, right;
+
+@include classnamefromlist($text-sizes, 'text', font-size);
+@include classnamefromlist($text-alignments, 'text-align');
+
+h1 {
+  font-size: $font-size-xl;
+  margin-bottom: $sizing-xl;
+}
+
+h2 {
+  font-size: $font-size-l;
+  margin-bottom: $sizing-l;
+}
+
+h3 {
+  font-size: $font-size-m;
+  margin-bottom: $sizing-m;
+}
+
+h4 {
+  font-size: $font-size-s;
+  margin-bottom: $sizing-s;
+}
+
+h5 {
+  font-size: $font-size-xs;
+  margin-bottom: $sizing-xs;
+}

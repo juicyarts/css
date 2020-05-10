@@ -1,0 +1,169 @@
+
+%btn,
+.btn {
+  @extend %flex__ac--center;
+  @extend %flex__ai--center;
+  @extend %flex__jc--center;
+  @extend %border-radius-l;
+  @extend %p-xs;
+
+  align-content: center;
+  align-items: center;
+  background: $button_background;
+  color: $button_foreground;
+  cursor: pointer;
+  display: flex;
+  font-family: $button_font_family;
+  font-weight: $button_font_weight;
+  justify-content: center;
+  text-align: center;
+  transition:
+    background $default-transition-duration linear,
+    color $default-transition-duration linear,
+    border $default-transition-duration linear;
+
+  &:active {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &.active,
+  &:active {
+    background: $primary-color;
+    color: $color-white;
+  }
+
+  &.border:not(.disabled) {
+    border: 2px solid $color-gray-5;
+
+    &.active,
+    &:active {
+      border: 2px solid $primary-color;
+    }
+  }
+}
+
+%btn--square,
+.btn--square {
+  @extend %flex__ac--center;
+  @extend %flex__ai--center;
+  @extend %flex__dir--column;
+  @extend %btn;
+
+  height: 80px;
+  width: 80px;
+}
+
+%btn--disabled,
+.btn--disabled {
+  @extend %btn;
+
+  background: $button_background_disabled;
+  color: $button_foreground_disabled;
+
+  i {
+    opacity: 0.6;
+  }
+
+  &.border {
+    border: 2px solid $button_background_disabled;
+    border-color: $button_background_disabled;
+  }
+}
+
+%btn--primary,
+.btn--primary {
+  @extend %btn;
+
+  background: $primary-color;
+  color: $color-white;
+
+  &.active,
+  &:active {
+    background: $primary-color;
+    color: $color-white;
+  }
+
+  &.border:not(.disabled) {
+    border: 2px solid $primary-color;
+
+    &.active,
+    &:active {
+      border: 2px solid $primary-color;
+    }
+  }
+}
+
+%btn--success,
+.btn--success {
+  @extend %btn;
+
+  background: $success-color;
+  color: $color-white;
+
+  &.active,
+  &:active {
+    background: $primary-color;
+    color: $color-white;
+  }
+
+  &.border:not(.disabled) {
+    border: 2px solid $success-color;
+
+    &.active,
+    &:active {
+      border: 2px solid $primary-color;
+    }
+  }
+}
+
+%btn--warn,
+.btn--warn {
+  @extend %btn;
+
+  background: $warn-color;
+  color: $color-white;
+
+  &.active,
+  &:active {
+    background: $primary-color;
+    color: $color-white;
+  }
+
+  &.border:not(.disabled) {
+    border: 2px solid $warn-color;
+
+    &.active,
+    &:active {
+      border: 2px solid $primary-color;
+    }
+  }
+}
+
+%btn--error,
+.btn--error {
+  @extend %btn;
+
+  background: $error-color;
+  color: $color-white;
+
+  &.active,
+  &:active {
+    background: $primary-color;
+    color: $color-white;
+  }
+
+  &.border:not(.disabled) {
+    border: 2px solid $error-color;
+
+    &.active,
+    &:active {
+      border: 2px solid $primary-color;
+    }
+  }
+}

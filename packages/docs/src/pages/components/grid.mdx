@@ -1,0 +1,178 @@
+---
+title: Grid
+path: /components/grid
+navigationLabel: Grid
+group: Components
+---
+
+# Grid
+
+12 colum grid, currently no responsive options
+
+## Examples
+
+Default usage
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-6 border-solid border-s border-color-gray-2 p-s">
+      Col-6
+    </div>
+    <div class="col-6 border-solid border-s border-color-gray-2 p-s">
+      Col-6
+    </div>
+  </div>
+</div>
+```
+
+```html hideEditor
+<>
+  <div class="container">
+    <div class="row">
+      {Array.from(new Array(6)).map((_,val) => (
+      <div
+        key={val}
+        class="col-1 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-1
+      </div>
+      ))}
+      <div
+        class="col-6 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-6
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-2 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-2
+      </div>
+      {Array.from(new Array(5)).map((_,val) => (
+      <div
+        key={val}
+        class="col-1 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-1
+      </div>
+      ))}
+      <div
+        class="col-5 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-5
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-3 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-3
+      </div>
+      {Array.from(new Array(5)).map((_,val) => (
+      <div
+        key={val}
+        class="col-1 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-1
+      </div>
+      ))}
+      <div
+        class="col-4 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-4
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-4 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-4
+      </div>
+      {Array.from(new Array(5)).map((_,val) => (
+      <div
+        key={val}
+        class="col-1 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-1
+      </div>
+      ))}
+      <div
+        class="col-3 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-3
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-5 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-5
+      </div>
+      {Array.from(new Array(5)).map((_,val) => (
+      <div
+        key={val}
+        class="col-1 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-1
+      </div>
+      ))}
+      <div
+        class="col-2 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-2
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-6 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-6
+      </div>
+      {Array.from(new Array(6)).map((_,val) => (
+      <div
+        key={val}
+        class="col-1 border-solid border-s border-color-gray-2 p-s text-align-center"
+      >
+        col-1
+      </div>
+      ))}
+    </div>
+  </div>
+</>
+```
+
+With Offsets
+
+```html
+<div class="container">
+  <div class="row">
+    <div
+      class="col-4 border-solid border-s border-color-gray-2 p-s text-align-center"
+    >
+      Col-4
+    </div>
+    <div
+      class="col-4 col-offset-4 border-solid border-s border-color-gray-2 p-s text-align-center"
+    >
+      Col-4
+    </div>
+  </div>
+</div>
+```

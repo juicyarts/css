@@ -1,0 +1,19 @@
+$palette: (
+  'white': $color-white,
+  'black': $color-black,
+  'blue': $color-blue,
+  'dark-blue': $color-dark-blue,
+  'orange': $color-orange,
+  'red': $color-red,
+  'green': $color-green,
+  'gray-1': $color-gray-1,
+  'gray-2': $color-gray-2,
+  'gray-3': $color-gray-3,
+  'gray-4': $color-gray-4,
+  'gray-5': $color-gray-5,
+  'gray-6': $color-gray-6,
+);
+
+@include classnamefromlist($palette, 'color');
+@include classnamefromlist($palette, 'bg', background);
+@include classnamefromlist($palette, 'border-color');

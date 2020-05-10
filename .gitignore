@@ -1,0 +1,16 @@
+# build
+dist
+build
+.cache
+docs/public
+
+# deps
+node_modules
+
+# misc
+.DS_Store
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

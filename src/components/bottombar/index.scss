@@ -1,0 +1,27 @@
+.bottombar {
+  background: $bottombar_background;
+  flex: 0 1 $bottombar_height;
+  height: $bottombar_height;
+  overflow: hidden;
+  z-index: 3;
+
+  button {
+    @extend %btn--square;
+  }
+
+  > div:nth-child(2) {
+    button {
+      flex: 1 0 240px;
+      max-width: 240px;
+      width: 100%;
+    }
+  }
+
+  > div {
+    height: 100%;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@juicyarts/css",
+  "version": "0.1.0",
+  "main": "index.scss",
+  "sass": "index.scss",
+  "license": "MIT",
+  "author": "juicyarts <huess@juicyarts.de>",
+  "files": [
+    "/src",
+    "/gfx",
+    "/fonts",
+    "/dist"
+  ],
+  "scripts": {
+    "lint": "stylelint './src/**/*.?css'",
+    "lint:fix": "stylelint './src/**/*.?css' --fix",
+    "build": "dart-sass ./src/index.scss ./dist/index.css"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@juicyarts/config-stylelint": "^0.1.0",
+    "dart-sass": "^1.25.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

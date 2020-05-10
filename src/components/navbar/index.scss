@@ -1,0 +1,42 @@
+@import '../../shared/variables';
+
+.navbar {
+  align-content: center;
+  align-items: center;
+  background: $color-white;
+  display: flex;
+  height: $navbar-height;
+  padding: $sizing-s;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+
+  &--fixed {
+    position: fixed;
+  }
+
+  > div[class^='col-'],
+  > div[class*=' col-'] {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+
+  &__title {
+    font-family: $font-family-regular;
+    font-size: $font-size-l;
+    height: unset;
+    line-height: inherit;
+    margin: 0;
+  }
+
+  &__brand {
+    background-image: url('#{$gfx-path}brand.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 75%;
+    width: 100%;
+  }
+}

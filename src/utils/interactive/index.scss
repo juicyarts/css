@@ -1,0 +1,10 @@
+@import '../../shared/variables';
+
+.interactive {
+  cursor: pointer;
+  transition: background 0.3s linear;
+
+  &:hover {
+    background: $color-gray-6;
+  }
+}

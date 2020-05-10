@@ -1,0 +1,11 @@
+// normalize browser styles
+@import '~normalize.css';
+@import './shared/variables';
+@import './shared/mixins/classNameFromList';
+@import './fonts';
+@import './components/index';
+@import './utils/index';
+
+// product based
+@import './core/index';
+@import './styleguide/index';

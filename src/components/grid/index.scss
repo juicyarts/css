@@ -1,0 +1,57 @@
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 90%;
+}
+
+.row {
+  width: 100%;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  & + & {
+    margin-top: $grid-gutter-width;
+  }
+}
+
+div[class^='col-'],
+div[class*=' col-'] {
+  box-sizing: border-box;
+  float: left;
+  margin-right: $grid-gutter-width;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* stylelint-disable */
+
+@for $column-length from 1 through $grid-column-length {
+  $calc: calc(
+    ((#{$grid-column-max-width} / #{$grid-column-length}) * #{$column-length}) -
+      (
+        #{$grid-gutter-width} *
+          (
+            (#{$grid-column-length} - #{$column-length}) /
+              #{$grid-column-length}
+          )
+      )
+  );
+
+  .col-#{$column-length} {
+    width: $calc;
+  }
+
+  .col-offset-#{$column-length} {
+    margin-left: calc(
+      ((#{$grid-column-max-width} / #{$grid-column-length}) * #{$column-length})
+    );
+  }
+}
+
+/* stylelint-enable */

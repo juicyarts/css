@@ -1,0 +1,41 @@
+---
+title: Spacing
+path: /utils/spacing
+navigationLabel: Spacing
+group: Utils
+---
+
+# Spacings
+
+```scss hidePreview hideError
+// these are our default values
+$sizing-xxs: 5px;
+$sizing-xs: 10px;
+$sizing-s: 15px;
+$sizing-m: 20px;
+$sizing-l: 30px;
+$sizing-xl: 40px;
+$sizing-xxl: 60px;
+```
+
+Using the variables above the spacing module generates extensible utlities.
+Extend your own classes using utility placeholders:
+
+```scss hidePreview hideError
+.foo {
+  // extend p-xxs -> padding: 5px
+  @extend %p-xxs;
+
+  // extend m-xl -> margin: 40px
+  @extend %m-xl;
+}
+```
+
+Or use them directly in your markup
+
+```html hideError
+<>
+<div class="p-xxs bg-red text-align-center"> FOO </div>
+<div class="m-xl bg-green text-align-left"> BAR </div>
+</>
+```

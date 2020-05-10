@@ -1,0 +1,16 @@
+.box {
+  background: $color-white;
+  padding: 20px 30px;
+  width: 100%;
+
+  &--header {
+    border-bottom: 1px solid $color-gray-5;
+    color: rgba(77, 77, 77, 0.5);
+    float: none;
+    font-size: 1.133rem;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+}

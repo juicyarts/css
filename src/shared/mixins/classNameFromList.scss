@@ -1,0 +1,14 @@
+@mixin classnamefromlist($list, $prefix, $property: false) {
+  @each $key, $value in $list {
+    $prop: if($property, $property, $prefix);
+    $cn: #{$prefix}-#{$key};
+    $val: if($value, $value, $key);
+
+    // @debug 'output #{$cn} #{$prop} #{$value}';
+
+    %#{$cn},
+    .#{$cn} {
+      #{$prop}: $val;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.md {
+  align-items: stretch;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  .md--master {
+    display: block;
+    flex: 0 0 320px;
+    margin-right: 5px;
+    overflow: auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  .md--detail {
+    flex: 0 1 100%;
+    overflow: auto;
+    padding: 80px 20px 20px;
+    position: relative;
+  }
+}

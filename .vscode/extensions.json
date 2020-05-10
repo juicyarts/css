@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "zignd.html-css-class-com",
+    "EditorConfig.editorconfig",
+    "mrmlnc.vscode-scss",
+    "shinnn.stylelint",
+    "esbenp.prettier-vscode"
+  ]
+}

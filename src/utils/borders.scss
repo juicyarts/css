@@ -1,0 +1,19 @@
+$width: (
+  s: 1px,
+  m: 4px,
+  l: 8px,
+);
+
+@include classnamefromlist($width, 'border');
+
+$style: (dotted, solid, dashed);
+
+@include classnamefromlist($style, 'border', border-style);
+
+$radius: (
+  s: $border-radius-s,
+  m: $border-radius-m,
+  l: $border-radius-l,
+);
+
+@include classnamefromlist($radius, 'border-radius');

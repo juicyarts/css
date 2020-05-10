@@ -1,0 +1,72 @@
+@import '../../shared/variables';
+
+.button-group {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  > button,
+  > a {
+    flex: 1 0;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &--horizontal {
+    flex-direction: row;
+
+    > button,
+    > a {
+      flex: 1 0 auto;
+      height: 100%;
+      margin-right: $sizing-xs;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--merged {
+      > button {
+        margin: 0;
+
+        &:first-child {
+          border-bottom-right-radius: 0;
+          border-right: 0 !important;
+          border-top-right-radius: 0;
+        }
+
+        &:last-child {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+        }
+
+        &:not(:last-child):not(:first-child) {
+          border-radius: 0;
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  &--vertical {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+
+    /* stylelint-disable */
+    > button,
+    > a {
+      margin-bottom: $sizing-m;
+      width: 100%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    /* stylelint-enable */
+  }
+}

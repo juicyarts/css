@@ -1,0 +1,59 @@
+// further normlaization
+* {
+  border: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+  &:not(input):not(select):not(option) {
+    user-select: none;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: $color-gray-4;
+  border-radius: 3px;
+  height: 8px;
+  width: 6px;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+::-webkit-credentials-auto-fill-button,
+::-webkit-contacts-auto-fill-button {
+  appearance: none;
+  display: none !important;
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-gray-1;
+  border-radius: 3px;
+}
+
+html {
+  color: $color-gray-1;
+  font-family: $default-font-family;
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
