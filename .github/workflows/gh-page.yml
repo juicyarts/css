@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Github Page
 on:
   release:
     types: [created]
@@ -20,7 +20,7 @@ jobs:
       - run: |
           cd packages/docs
           yarn
-          yarn build
+          yarn build --prefix-paths
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
 
